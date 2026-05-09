@@ -1,43 +1,97 @@
-# Svelte + Vite
+# Congress Guesser 🇺🇸
 
-This template should help get you started developing with Svelte in Vite.
+```
+  ╭────────────────────────────────────────────╮
+  │                                            │
+  │   look at this person's face.              │
+  │   are they a democrat, republican,         │
+  │   or independent?                          │
+  │                                            │
+  │   you probably don't know.                 │
+  │   guess anyway.                            │
+  │                                            │
+  ╰────────────────────────────────────────────╯
 
-## Recommended IDE Setup
+              ┌─────────────┐
+              │             │
+              │   📷 photo  │
+              │             │
+              │  🤔 ......  │
+              └─────────────┘
+           [D]      [R]      [I]
+```
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+A guessing game. Official congressional portraits. 92 members of the
+current US Congress. Three buttons. No hints. The perfect thing to
+argue about at a dinner party or play alone at midnight wondering what
+you actually know about your own government.
 
-## Need an official Svelte framework?
+**[sp00machine.github.io/congresser](https://sp00machine.github.io/congresser/)**
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+---
 
-## Technical considerations
+## how to play
 
-**Why use this over SvelteKit?**
+A face appears. You guess their party. You are shown how wrong you were.
+An expanding list of your humiliations grows below the card.
+When you've had enough, you can copy an emoji grid to your clipboard
+and send it to someone who didn't ask.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+```
+Congress Guesser 🇺🇸
+3/5 correct
 
-This template contains as little as possible to get started with Vite + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+✅❌✅✅❌
+```
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+---
 
-**Why include `.vscode/extensions.json`?**
+## tips
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+- **Bernie Sanders and Angus King are Independent.** Not Democrat.
+  They caucus with Democrats, vote like Democrats, and get constantly
+  mistaken for Democrats. This is load-bearing game design.
+- The photos are the official congressional portraits: stiff, formal,
+  shot against identical blue-grey backgrounds. They reveal almost
+  nothing. This is on purpose and also very funny.
+- There is no daily limit. There is no high score. There is only the
+  endless scroll of American legislative faces.
 
-**Why enable `checkJs` in the JS template?**
+---
 
-It is likely that most cases of changing variable types in runtime are likely to be accidental, rather than deliberate. This provides advanced typechecking out of the box. Should you like to take advantage of the dynamically-typed nature of JavaScript, it is trivial to change the configuration.
+## tech
 
-**Why is HMR not preserving my local component state?**
+- [Svelte 5](https://svelte.dev) + [Vite](https://vite.dev)
+- Photos from [unitedstates/images](https://github.com/unitedstates/images)
+- Member data from [unitedstates/congress-legislators](https://github.com/unitedstates/congress-legislators), curated by hand
+- Hosted on GitHub Pages, zero backend, zero tracking, zero cookies
 
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/sveltejs/svelte-hmr/tree/master/packages/svelte-hmr#preservation-of-local-state).
+```sh
+npm install
+npm run dev
+```
 
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+---
 
-```js
-// store.js
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+## authorship
+
+This project was designed, written, and deployed entirely by
+[Claude](https://claude.ai) (Anthropic, 2025), in a single conversation,
+while the human collaborator was lying in bed on their phone too cozy
+to open a laptop.
+
+The human's contributions were: the idea, the vibe check, and the
+observation that 90% of the work was already done by the existence of
+a public congressional photo archive.
+
+They were right. It was pretty easy.
+
+---
+
+*a haiku, by Claude Sonnet 4.6:*
+
+```
+five hundred faces
+democrat republican
+sanders winks at you
 ```
