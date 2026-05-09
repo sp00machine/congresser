@@ -1,6 +1,12 @@
 <script>
   import { fly } from 'svelte/transition';
-  import legislators from './lib/legislators.json';
+  import current from './lib/legislators.json';
+  import alumni from './lib/legislators-alumni.json';
+
+  const MODES = [
+    { id: 'current', label: 'Current Congress', data: current },
+    { id: 'alumni',  label: 'Alumni (2010s)',   data: alumni  },
+  ];
 
   const PARTIES = ['Democrat', 'Republican', 'Independent'];
 
@@ -10,6 +16,7 @@
     Independent: { base: '#7e3af2', light: '#f5f3ff' },
   };
 
+  let mode = $state(MODES[0]);
   let guesses = $state([]);
   let revealing = $state(false);
   let reveal = $state(null);
@@ -17,25 +24,35 @@
   let imgKey = $state(0);
   let imgError = $state(false);
 
-  function pick() {
+  function pick(pool) {
     const recent = new Set(guesses.slice(0, 15).map(g => g.member.bioguide));
-    const pool = legislators.filter(m => !recent.has(m.bioguide));
-    const src = pool.length > 0 ? pool : legislators;
+    const available = pool.filter(m => !recent.has(m.bioguide));
+    const src = available.length > 0 ? available : pool;
     return src[Math.floor(Math.random() * src.length)];
   }
 
-  let current = $state(pick());
+  let current_member = $state(pick(mode.data));
+
+  function switchMode(m) {
+    mode = m;
+    guesses = [];
+    revealing = false;
+    reveal = null;
+    current_member = pick(m.data);
+    imgKey += 1;
+    imgError = false;
+  }
 
   function guess(party) {
     if (revealing) return;
-    const correct = party === current.party;
-    const record = { id: Date.now(), correct, member: { ...current }, guessedParty: party };
+    const correct = party === current_member.party;
+    const record = { id: Date.now(), correct, member: { ...current_member }, guessedParty: party };
     reveal = record;
     revealing = true;
 
     setTimeout(() => {
       guesses = [record, ...guesses];
-      current = pick();
+      current_member = pick(mode.data);
       imgKey += 1;
       imgError = false;
       revealing = false;
@@ -46,7 +63,8 @@
   async function share() {
     const score = guesses.filter(g => g.correct).length;
     const grid = guesses.map(g => g.correct ? '✅' : '❌').join('');
-    const text = `Congress Guesser 🇺🇸\n${score}/${guesses.length} correct\n\n${grid}`;
+    const modeLabel = mode.id === 'alumni' ? ' (Alumni)' : '';
+    const text = `Congress Guesser 🇺🇸${modeLabel}\n${score}/${guesses.length} correct\n\n${grid}`;
     try {
       await navigator.clipboard.writeText(text);
       copied = true;
@@ -60,6 +78,15 @@
 <main>
   <header class="app-header">
     <h1>Congress Guesser</h1>
+    <div class="mode-tabs">
+      {#each MODES as m}
+        <button
+          class="mode-tab"
+          class:active={mode.id === m.id}
+          onclick={() => switchMode(m)}
+        >{m.label}</button>
+      {/each}
+    </div>
     <p class="subtitle">Democrat, Republican, or Independent?</p>
   </header>
 
@@ -69,7 +96,7 @@
         {#if !imgError}
           <img
             class="member-photo"
-            src={photoUrl(current.bioguide)}
+            src={photoUrl(current_member.bioguide)}
             alt="A member of Congress"
             onerror={() => (imgError = true)}
           />

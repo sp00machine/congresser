@@ -32,6 +32,34 @@ main {
   margin-bottom: 4px;
 }
 
+.mode-tabs {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 10px 0 6px;
+}
+
+.mode-tab {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 2px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.mode-tab:hover { border-color: #94a3b8; color: #334155; }
+
+.mode-tab.active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: white;
+}
+
 .subtitle {
   color: #64748b;
   font-size: 14px;

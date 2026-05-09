@@ -490,7 +490,7 @@
     "chamber": "House"
   },
   {
-    "bioguide": "F000474",
+    "bioguide": "F000476",
     "name": "Maxwell Frost",
     "party": "Democrat",
     "state": "FL",
@@ -518,7 +518,7 @@
     "chamber": "House"
   },
   {
-    "bioguide": "M000151",
+    "bioguide": "M000312",
     "name": "Jim McGovern",
     "party": "Democrat",
     "state": "MA",
@@ -628,5 +628,12 @@
     "party": "Republican",
     "state": "CA",
     "chamber": "House"
+  },
+  {
+    "bioguide": "H000601",
+    "name": "Bill Hagerty",
+    "party": "Republican",
+    "state": "TN",
+    "chamber": "Senate"
   }
 ]
