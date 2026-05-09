@@ -72,7 +72,7 @@
     } catch { /* clipboard not available */ }
   }
 
-  const photoUrl = b => `https://unitedstates.github.io/images/congress/225x275/${b}.jpg`;
+  const photoUrl = m => m.photo ?? `https://unitedstates.github.io/images/congress/225x275/${m.bioguide}.jpg`;
 </script>
 
 <main>
@@ -96,7 +96,7 @@
         {#if !imgError}
           <img
             class="member-photo"
-            src={photoUrl(current_member.bioguide)}
+            src={photoUrl(current_member)}
             alt="A member of Congress"
             onerror={() => (imgError = true)}
           />
@@ -159,7 +159,7 @@
         >
           <img
             class="history-thumb"
-            src={photoUrl(g.member.bioguide)}
+            src={photoUrl(g.member)}
             alt={g.member.name}
             onerror={e => (e.target.style.display = 'none')}
           />
