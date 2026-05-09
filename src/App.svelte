@@ -54,7 +54,7 @@
     } catch { /* clipboard not available */ }
   }
 
-  const photoUrl = b => `https://theunitedstates.io/images/congress/225x275/${b}.jpg`;
+  const photoUrl = b => `https://unitedstates.github.io/images/congress/225x275/${b}.jpg`;
 </script>
 
 <main>
