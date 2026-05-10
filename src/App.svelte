@@ -26,21 +26,32 @@
   let imgKey = $state(0);
   let imgError = $state(false);
 
-  function pick(pool) {
-    const recent = new Set(guesses.slice(0, 15).map(g => g.member.bioguide));
-    const available = pool.filter(m => !recent.has(m.bioguide));
-    const src = available.length > 0 ? available : pool;
-    return src[Math.floor(Math.random() * src.length)];
+  // Shuffle a copy of the pool into a queue. When empty, reshuffle.
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
   }
 
-  let current_member = $state(pick(mode.data));
+  let queue = $state(shuffle(MODES[0].data));
+
+  function pick() {
+    if (queue.length === 0) queue = shuffle(mode.data);
+    return queue.pop();
+  }
+
+  let current_member = $state(pick());
 
   function switchMode(m) {
     mode = m;
+    queue = shuffle(m.data);
     guesses = [];
     revealing = false;
     reveal = null;
-    current_member = pick(m.data);
+    current_member = pick();
     imgKey += 1;
     imgError = false;
   }
@@ -54,7 +65,7 @@
 
     setTimeout(() => {
       guesses = [record, ...guesses];
-      current_member = pick(mode.data);
+      current_member = pick();
       imgKey += 1;
       imgError = false;
       revealing = false;
