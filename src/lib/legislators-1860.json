@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Stephen Douglas",
+    "party": "Democrat",
+    "state": "IL",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/53200/53278v.jpg"
+  },
+  {
+    "name": "William Seward",
+    "party": "Republican",
+    "state": "NY",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/57800/57831v.jpg"
+  },
+  {
+    "name": "Charles Sumner",
+    "party": "Republican",
+    "state": "MA",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/54100/54138v.jpg"
+  },
+  {
+    "name": "Jefferson Davis",
+    "party": "Democrat",
+    "state": "MS",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/23800/23852v.jpg"
+  },
+  {
+    "name": "Andrew Johnson",
+    "party": "Democrat",
+    "state": "TN",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/05700/05704v.jpg"
+  },
+  {
+    "name": "Henry Wilson",
+    "party": "Republican",
+    "state": "MA",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/cwpbh/00600/00612v.jpg"
+  },
+  {
+    "name": "Benjamin Wade",
+    "party": "Republican",
+    "state": "OH",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26700/26730v.jpg"
+  },
+  {
+    "name": "Hannibal Hamlin",
+    "party": "Republican",
+    "state": "ME",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26500/26541v.jpg"
+  },
+  {
+    "name": "Lyman Trumbull",
+    "party": "Republican",
+    "state": "IL",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26700/26792v.jpg"
+  },
+  {
+    "name": "Zachariah Chandler",
+    "party": "Republican",
+    "state": "MI",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26800/26815v.jpg"
+  },
+  {
+    "name": "James Doolittle",
+    "party": "Republican",
+    "state": "WI",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26800/26832v.jpg"
+  },
+  {
+    "name": "Jacob Collamer",
+    "party": "Republican",
+    "state": "VT",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26500/26555v.jpg"
+  },
+  {
+    "name": "James A. Bayard",
+    "party": "Democrat",
+    "state": "DE",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26600/26652v.jpg"
+  },
+  {
+    "name": "R.M.T. Hunter",
+    "party": "Democrat",
+    "state": "VA",
+    "chamber": "Senate",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26600/26664v.jpg"
+  },
+  {
+    "name": "John C. Breckinridge",
+    "party": "Democrat",
+    "state": "KY",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/pga/04800/04882v.jpg"
+  },
+  {
+    "name": "Thaddeus Stevens",
+    "party": "Republican",
+    "state": "PA",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/cwpbh/00400/00460v.jpg"
+  },
+  {
+    "name": "William Pennington",
+    "party": "Republican",
+    "state": "NJ",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/pga/08500/08507v.jpg"
+  },
+  {
+    "name": "John Sherman",
+    "party": "Republican",
+    "state": "OH",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/98000/98096v.jpg"
+  },
+  {
+    "name": "Elihu Washburne",
+    "party": "Republican",
+    "state": "IL",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26700/26793v.jpg"
+  },
+  {
+    "name": "Galusha Grow",
+    "party": "Republican",
+    "state": "PA",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26600/26639v.jpg"
+  },
+  {
+    "name": "Clement Vallandigham",
+    "party": "Democrat",
+    "state": "OH",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26700/26734v.jpg"
+  },
+  {
+    "name": "James Craig",
+    "party": "Democrat",
+    "state": "MO",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26800/26807v.jpg"
+  },
+  {
+    "name": "Cadwallader Washburn",
+    "party": "Republican",
+    "state": "WI",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26800/26835v.jpg"
+  },
+  {
+    "name": "Chauncey Knapp",
+    "party": "Republican",
+    "state": "MA",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26500/26568v.jpg"
+  },
+  {
+    "name": "Anson Burlingame",
+    "party": "Republican",
+    "state": "MA",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26500/26565v.jpg"
+  },
+  {
+    "name": "Philemon Bliss",
+    "party": "Republican",
+    "state": "OH",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26700/26745v.jpg"
+  },
+  {
+    "name": "William A. Howard",
+    "party": "Republican",
+    "state": "MI",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26800/26817v.jpg"
+  },
+  {
+    "name": "William Barksdale",
+    "party": "Democrat",
+    "state": "MS",
+    "chamber": "House",
+    "photo": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/26700/26720v.jpg"
+  }
+]

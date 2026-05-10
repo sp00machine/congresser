@@ -2,10 +2,12 @@
   import { fly } from 'svelte/transition';
   import current from './lib/legislators.json';
   import alumni from './lib/legislators-alumni.json';
+  import era1860 from './lib/legislators-1860.json';
 
   const MODES = [
     { id: 'current', label: 'Current Congress', data: current },
     { id: 'alumni',  label: 'Alumni (2010s)',   data: alumni  },
+    { id: '1860',    label: '1860 — Civil War Eve', data: era1860 },
   ];
 
   const PARTIES = ['Democrat', 'Republican', 'Independent'];
